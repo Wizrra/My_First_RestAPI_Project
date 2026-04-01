@@ -90,14 +90,27 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.getenv("DATABASES_NAME"),      # The name of your MySQL database
+#         'USER': os.getenv("DATABASES_USER"),          # Your MySQL username
+#         'PASSWORD': os.getenv("DATABASES_PASSWORD"),      # Your MySQL password
+#         'HOST': 'localhost',              # Or the IP address of your MySQL server
+#         'PORT': '3306',                   # The default MySQL port is 3306
+#     }
+# }
+
+# settings.py
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv("DATABASES_NAME"),      # The name of your MySQL database
-        'USER': os.getenv("DATABASES_USER"),          # Your MySQL username
-        'PASSWORD': os.getenv("DATABASES_PASSWORD"),      # Your MySQL password
-        'HOST': 'localhost',              # Or the IP address of your MySQL server
-        'PORT': '3306',                   # The default MySQL port is 3306
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("DATABASES_NAME"),
+        'USER': os.getenv("DATABASES_USER"),
+        'PASSWORD': os.getenv("DATABASES_PASSWORD"),
+        'HOST': '9qasp5v56q8ckkf5dc.leapcellpool.com',
+        'PORT': '6438',
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
 
